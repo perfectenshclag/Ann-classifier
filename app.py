@@ -58,7 +58,8 @@ prediction = model.predict(input_data_scaled)
 prediction_prob = prediction[0][0]
 
 
-st.write(f'Churn Probability:{prediction_prob:.2f}')
+st.write(f'Churn Probability: {prediction_proba*100:.2f+"%"}')
+
 # Display the result
 if st.button('Predict'):
     if prediction_prob > 0.5:
